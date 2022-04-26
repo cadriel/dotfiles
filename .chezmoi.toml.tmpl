@@ -1,0 +1,5 @@
+{{ $computerName := output "scutil" "--get" "ComputerName" | trim }}
+#{{- $hostname := promptString "hostname" -}}
+[data]
+  computerName = "{{ $hostname }}"
+

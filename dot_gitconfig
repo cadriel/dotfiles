@@ -1,0 +1,20 @@
+[user]
+	name = Craig Bassett
+	email = craig.bassett@gmail.com
+[credential]
+        helper = osxkeychain
+[color]
+        ui = true
+[push]
+	default = current
+[core]
+	excludesfile = /Users/craig/.gitignore_global
+[commit]
+	template = /Users/craig/.stCommitMsg
+	gpgSign = false
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
+[alias]
+	c = commit -s
