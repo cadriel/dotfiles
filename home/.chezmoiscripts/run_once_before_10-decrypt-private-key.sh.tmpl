@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f "$HOME/.age/chezmoi" ]; then
+  mkdir -p "$HOME/.age"
+  age --decrypt --output "${HOME}/.age/chezmoi" "{{ .chezmoi.workingTree }}/home/keys/chezmoi.age"
+  chmod 600 "$HOME/.age/chezmoi"
+fi
+

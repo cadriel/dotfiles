@@ -1,0 +1,25 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+echo "🚸  Setup our Computer Name"
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "{{ .computername }}"
+sudo scutil --set HostName "{{ .computername }}"
+sudo scutil --set LocalHostName "{{ .computername }}"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "{{ .computername }}"
+{{ end -}}
+
+{{- if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "debian") -}}
+#!/usr/bin/env bash
+
+echo "🚸  Setup our Computer Name"
+
+# Ask for the administrator password upfront
+sudo -v
+
+hostnamectl set-hostname {{ .computername }}
+{{ end -}}

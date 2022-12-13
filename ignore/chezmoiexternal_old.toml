@@ -1,0 +1,48 @@
+[".zprezto"]
+    type = "git-repo"
+    url = "https://github.com/sorin-ionescu/prezto.git"
+    refreshPeriod = "168h"
+    [".zprezto".clone]
+        args = ["--recurse-submodules"]
+    [".zprezto".pull]
+        args = ["--recurse-submodules"]
+[".vim/pack/dist/start/ayu-vim"]
+    type="git-repo"
+    url="https://github.com/luxed/ayu-vim.git"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-colors-solarized"]
+    type = "git-repo"
+    url = "https://github.com/altercation/vim-colors-solarized.git"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-airline"]
+    type = "git-repo"
+    url = "https://github.com/vim-airline/vim-airline"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-airline-themes"]
+    type = "git-repo"
+    url = "https://github.com/vim-airline/vim-airline-themes"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-sensible"]
+    type = "git-repo"
+    url = "https://github.com/tpope/vim-sensible.git"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-gitgutter"]
+    type = "git-repo"
+    url = "https://github.com/airblade/vim-gitgutter.git"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-detectindent"]
+    type = "git-repo"
+    url = "https://github.com/ciaranm/detectindent.git"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-supertab"]
+    type = "git-repo"
+    url = "https://github.com/ervandew/supertab.git"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-MatchTag"]
+    type = "git-repo"
+    url = "https://github.com/gregsexton/MatchTag.git"
+    refreshPeriod = "168h"
+[".vim/pack/dist/start/vim-delimitMate"]
+    type = "git-repo"
+    url = "https://github.com/Raimondi/delimitMate.git"
+    refreshPeriod = "168h"

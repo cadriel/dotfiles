@@ -1,0 +1,8 @@
+{{- if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux") -}}
+#!/usr/bin/env bash
+
+echo "🚸  Setup SpaceVim"
+
+curl -sLf https://spacevim.org/install.sh | bash -s -- --no-fonts
+
+{{ end -}}

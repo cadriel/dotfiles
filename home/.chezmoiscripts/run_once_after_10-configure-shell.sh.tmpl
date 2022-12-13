@@ -1,0 +1,28 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+echo "🚸  Setup our Shell"
+
+# Ask for the administrator password upfront
+sudo -v
+
+{{- if eq .chezmoi.arch "arm64" }}
+sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/fish
+{{- end }}
+
+{{- if eq .chezmoi.arch "amd64" }}
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/fish
+{{- end }}
+
+{{ end -}}
+
+{{- if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "debian") -}}
+#!/usr/bin/env bash
+
+echo "🚸  Setup our Shell"
+
+# Ask for the administrator password upfront
+sudo -v
+
+chsh -s /usr/bin/fish
+{{ end -}}

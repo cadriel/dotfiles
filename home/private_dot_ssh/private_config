@@ -1,0 +1,6 @@
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_default
+  IdentityFile ~/.ssh/id_github
+  IdentityFile ~/.ssh/id_cloud
+

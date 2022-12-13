@@ -1,0 +1,33 @@
+{{- if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "debian") -}}
+#!/bin/bash
+
+echo "🚸  Install packages"
+
+# Run apt
+sudo apt install fish git age neofetch neovim python3 build-essential
+
+# Install snaps
+sudo snap install starship
+sudo snap install chezmoi --classic
+
+# Install n
+if [ ! -d "$HOME/.n" ]; then
+  echo '👊  Installing n'
+  export N_PREFIX=$HOME/.n
+  curl -L https://bit.ly/n-install | bash -s -- -n
+fi
+
+# Install vivid
+if [ ! -f "$HOME/usr/bin/vivid" ]; then
+  echo '👊  Installing vivid'
+  VIVID_URL="$(curl -L -s https://api.github.com/repos/sharkdp/vivid/releases/latest | grep -o -E "https://(.*)vivid_(.*)_amd64.deb")"
+  curl -L -s $VIVID_URL -o "$HOME/vivid.deb"
+  sudo dpkg -i "$HOME/vivid.deb"
+  rm "$HOME/vivid.deb"
+fi
+
+# Fonts
+# git clone https://github.com/ryanoasis/nerd-fonts ~/nerd-fonts
+# sudo ~/nerd-fonts/install.sh FiraCode FiraMono
+
+{{ end -}}
