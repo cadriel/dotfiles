@@ -7,8 +7,3 @@ Host github.com
   HostName github.com
   IdentityFile ~/.ssh/id_personal@github
   IdentitiesOnly yes
-
-Host quest.github.com
-  HostName github.com
-  IdentityFile ~/.ssh/id_quest@github
-  IdentitiesOnly yes
