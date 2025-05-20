@@ -7,9 +7,6 @@ echo "🚸  Install packages"
 brew bundle --file=/dev/stdin <<EOF
 
 # Taps
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-tap "homebrew/cask-fonts"
 
 # Core
 brew "chezmoi"
@@ -44,8 +41,9 @@ cask '1password'
 cask 'ghostty'
 cask "google-chrome"
 cask 'visual-studio-code'
-cask 'spotify'
+# cask 'spotify'
 cask 'discord'
+cask 'slack'
 cask 'stats'
 cask 'betterdisplay'
 EOF
