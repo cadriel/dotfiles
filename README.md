@@ -16,6 +16,13 @@ Get started right away by running this in your terminal.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cadriel/dotfiles/HEAD/install.sh)"
 ```
 
+Update the repository remote url in order to use your `.ssh` keys.
+
+```bash
+cd ~/.local/share/chezmoi
+git remote set-url origin git@github.com:cadriel/dotfiles.git
+```
+
 Continue with defining sane default installs of `node` and `ruby` with the following.
 
 ```bash
