@@ -1,0 +1,41 @@
+packages:
+  darwin:
+    brews:
+    - 'chezmoi'
+    - 'age'
+    - 'fish'
+    - 'starship'
+    - 'lsd'
+    - 'vivid'
+    - 'git'
+    - 'grc'
+    - 'coreutils'
+    - 'wget'
+    - 'mas'
+    - 'neofetch'
+    - 'fzf'
+    - 'nvim'
+    - 'nvim'
+    - 'n'
+    - 'frum'
+    - 'python'
+    - 'perl'
+    - 'gh'
+
+    casks:
+    - 'font-fira-code'
+    - 'the-unarchiver'
+    - 'rectangle-pro'
+    - '1password'
+    - 'ghostty'
+    - 'google-chrome'
+    - 'visual-studio-code'
+    - 'discord'
+    - 'slack'
+    - 'stats'
+    - 'betterdisplay'
+    - 'inkdrop'
+
+    mas:
+    - name: 'Amphetamine'
+      id: 937984704
