@@ -2,6 +2,7 @@ packages:
   darwin:
     brews:
     - 'chezmoi'
+    - 'mas'
     - 'age'
     - 'fish'
     - 'starship'
@@ -11,11 +12,9 @@ packages:
     - 'grc'
     - 'coreutils'
     - 'wget'
-    - 'mas'
     - 'neofetch'
     - 'fzf'
-    - 'nvim'
-    - 'nvim'
+    - 'neovim'
     - 'n'
     - 'frum'
     - 'python'
@@ -24,6 +23,7 @@ packages:
 
     casks:
     - 'font-fira-code'
+    - 'font-jetbrains-mono'
     - 'the-unarchiver'
     - 'rectangle-pro'
     - '1password'
