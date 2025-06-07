@@ -37,6 +37,7 @@ packages:
     - 'stats'
     - 'betterdisplay'
     - 'inkdrop'
+    - 'syncthing'
 
     mas:
     - name: 'Amphetamine'
