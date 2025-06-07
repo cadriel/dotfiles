@@ -1,0 +1,17 @@
+{{ $DEFAULT_EMAIL := env "USER_EMAIL" }}
+{{ $DEFAULT_COMPUTERNAME := env "USER_COMPUTERNAME" }}
+
+{{- $email := promptString "email" $DEFAULT_EMAIL -}}
+{{- $computername := promptString "intended hostname" $DEFAULT_COMPUTERNAME -}}
+
+encryption = "age"
+[age]
+  identity = "~/.age/chezmoi"
+  recipient = "age17r5nunht66n03sgvyr6073hr3vk527wmuxdlvv0wgerdp38n7ykqeshje5"
+
+[data]
+  email = "{{ $email }}"
+  computername = "{{ $computername }}"
+
+[edit]
+  command = "nvim"

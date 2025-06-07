@@ -1,0 +1,19 @@
+[user]
+  name = Craig Bassett
+  email = {{ .email }}
+[credential]
+  helper = osxkeychain
+[color]
+  ui = true
+[push]
+  default = current
+[core]
+  excludesfile = /Users/{{ .chezmoi.username }}/.gitignore_global
+[commit]
+  gpgSign = false
+[pull]
+  rebase = true
+[init]
+  defaultBranch = main
+[alias]
+  c = commit -s

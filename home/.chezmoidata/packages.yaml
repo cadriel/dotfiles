@@ -20,6 +20,8 @@ packages:
     - 'python'
     - 'perl'
     - 'gh'
+    - 'zoxide'
+    - 'yazi'
 
     casks:
     - 'font-fira-code'
