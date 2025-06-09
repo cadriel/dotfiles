@@ -24,8 +24,7 @@ packages:
     - 'yazi'
 
     casks:
-    - 'font-fira-code'
-    - 'font-jetbrains-mono'
+    - 'font-fira-code-nerd-font'
     - 'the-unarchiver'
     - 'rectangle-pro'
     - '1password'

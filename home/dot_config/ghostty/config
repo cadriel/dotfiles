@@ -1,5 +1,8 @@
-font-family = "Fira Code"
-font-size = 15
-theme = GruvboxDark
+font-family = "FiraCode Nerd Font"
+font-size = 16
+theme = catppuccin-mocha
 background-opacity = 0.90
 background-blur = 20
+mouse-hide-while-typing = true
+window-decoration = true
+macos-option-as-alt = true

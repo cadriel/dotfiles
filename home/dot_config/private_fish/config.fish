@@ -1,6 +1,6 @@
 if status is-interactive
   # Update LSColors to match what we want.
-  set -gx LS_COLORS (vivid generate gruvbox-dark)
+  set -gx LS_COLORS (vivid generate catppuccin-mocha)
 
   # Init starship
   starship init fish | source
