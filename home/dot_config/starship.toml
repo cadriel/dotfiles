@@ -1,13 +1,17 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Define the prompt format
 format = """
-[](#9A348E)\
+[](user_os_bg)\
 $os\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:path_bg fg:user_os_bg)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:path_bg bg:git_bg)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:git_bg bg:tooling_bg)\
 $c\
 $elixir\
 $elm\
@@ -20,12 +24,29 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:tooling_bg bg:endcap_bg)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:endcap_bg bg:time_bg)\
 $time\
-[ ](fg:#33658A)\
+[ ](fg:time_bg)\
 """
+
+# Set the palette
+palette = 'pastel'
+
+# Define palette's
+[palettes.pastel]
+user_os_bg = '#9A348E'
+user_os_fg = '#ebc5e7'
+tooling_bg = '#86BBD8'
+tooling_fg = '#263841'
+path_bg = '#DA627D'
+path_fg = '#ecd5c7'
+git_bg = '#FCA17D'
+git_fg = '#442b22'
+time_bg = '#33658A'
+time_fg = '#c3d6e5'
+endcap_bg = '#06969A'
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
@@ -34,19 +55,19 @@ $time\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
+style_user = "fg:user_os_fg bg:user_os_bg"
+style_root = "fg:user_os_fg bg:user_os_bg"
 format = '[$user ]($style)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#9A348E"
+style = "bg:user_os_bg"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:#DA627D"
+style = "fg:path_fg bg:path_bg"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -66,84 +87,84 @@ truncation_symbol = "…/"
 
 [c]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [cpp]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#06969A"
+style = "bg:endcap_bg"
 format = '[ $symbol $context ]($style)'
 
 [elixir]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#FCA17D"
+style = "fg:git_fg bg:git_bg"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
+style = "fg:git_fg bg:git_bg"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = "󰆥 "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
-style = "bg:#86BBD8"
+style = "fg:tooling_fg bg:tooling_bg"
 format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%-l:%M %p"
-style = "bg:#33658A"
+style = "fg:time_fg bg:time_bg"
 format = '[  $time ]($style)'
