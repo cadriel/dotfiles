@@ -22,6 +22,7 @@ packages:
     - 'gh'
     - 'zoxide'
     - 'yazi'
+    - 'pnpm'
 
     casks:
     - 'font-fira-code-nerd-font'
@@ -37,6 +38,8 @@ packages:
     - 'betterdisplay'
     - 'inkdrop'
     - 'syncthing'
+    - 'chatgpt'
+    - 'nikitabobko/tap/aerospace'
 
     mas:
     - name: 'Amphetamine'
