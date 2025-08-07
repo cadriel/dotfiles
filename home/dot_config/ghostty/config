@@ -6,3 +6,4 @@ background-blur = 20
 mouse-hide-while-typing = true
 window-decoration = true
 macos-option-as-alt = true
+keybind = shift+enter=text:\n

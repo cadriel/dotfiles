@@ -39,6 +39,7 @@ packages:
     - 'inkdrop'
     - 'syncthing'
     - 'chatgpt'
+    - 'gitkraken'
     - 'nikitabobko/tap/aerospace'
 
     mas:
