@@ -38,9 +38,7 @@ packages:
     - 'betterdisplay'
     - 'inkdrop'
     - 'syncthing'
-    - 'chatgpt'
     - 'gitkraken'
-    - 'nikitabobko/tap/aerospace'
 
     mas:
     - name: 'Amphetamine'
