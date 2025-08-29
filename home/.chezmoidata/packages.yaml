@@ -26,6 +26,8 @@ packages:
 
     casks:
     - 'font-fira-code-nerd-font'
+    - 'font-sf-pro'
+    - 'font-sf-mono'
     - 'the-unarchiver'
     - 'rectangle-pro'
     - '1password'
@@ -39,6 +41,7 @@ packages:
     - 'inkdrop'
     - 'syncthing'
     - 'gitkraken'
+    - 'whatsapp'
 
     mas:
     - name: 'Amphetamine'
