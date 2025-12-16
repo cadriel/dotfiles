@@ -42,7 +42,10 @@ packages:
     - 'syncthing'
     - 'gitkraken'
     - 'whatsapp'
+    - 'spotify'
 
     mas:
     - name: 'Amphetamine'
       id: 937984704
+    - name: 'Canary Mail App'
+      id: 1236045954
