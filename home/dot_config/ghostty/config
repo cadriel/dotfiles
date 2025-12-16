@@ -6,4 +6,8 @@ background-blur = 20
 mouse-hide-while-typing = true
 window-decoration = true
 macos-option-as-alt = true
+quick-terminal-size = 25%
 keybind = shift+enter=text:\n
+# keybind = global:ctrl+esc=toggle_quick_terminal
+keybind = global:ctrl+backquote=toggle_quick_terminal
+
