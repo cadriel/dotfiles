@@ -9,3 +9,6 @@ set -gx VISUAL 'code --wait'
 # Export our chezmoi data defaults.
 set -gx USER_EMAIL {{ .email }}
 set -gx USER_COMPUTERNAME "{{ .computername }}"
+
+# Apply any user path additions.
+fish_add_path -m ~/.local/bin
