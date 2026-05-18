@@ -12,7 +12,6 @@ packages:
     - 'grc'
     - 'coreutils'
     - 'wget'
-    - 'neofetch'
     - 'fzf'
     - 'neovim'
     - 'n'
