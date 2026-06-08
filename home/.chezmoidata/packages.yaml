@@ -37,7 +37,6 @@ packages:
     - 'slack'
     - 'stats'
     - 'betterdisplay'
-    - 'inkdrop'
     - 'syncthing-app'
     - 'gitkraken'
     - 'whatsapp'
