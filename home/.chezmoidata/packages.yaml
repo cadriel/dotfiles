@@ -29,7 +29,6 @@ packages:
     - 'font-sf-mono'
     - 'the-unarchiver'
     - 'rectangle-pro'
-    - '1password'
     - 'ghostty'
     - 'google-chrome'
     - 'visual-studio-code'
@@ -41,9 +40,9 @@ packages:
     - 'gitkraken'
     - 'whatsapp'
     - 'spotify'
+    - 'proton-mail'
+    - 'protonvpn'
 
     mas:
     - name: 'Amphetamine'
       id: 937984704
-    - name: 'Canary Mail App'
-      id: 1236045954
