@@ -41,6 +41,7 @@ packages:
     - 'whatsapp'
     - 'spotify'
     - 'proton-mail'
+    - 'proton-pass'
     - 'protonvpn'
 
     mas:
