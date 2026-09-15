@@ -22,6 +22,7 @@ packages:
     - 'zoxide'
     - 'yazi'
     - 'pnpm'
+    - 'micro'
 
     casks:
     - 'font-fira-code-nerd-font'
