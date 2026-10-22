@@ -20,7 +20,7 @@ Update the repository remote url in order to use your `.ssh` keys.
 
 ```bash
 cd ~/.local/share/chezmoi
-git remote set-url origin git@github.com:cadriel/dotfiles.git
+git remote set-url origin git@github.com-personal:cadriel/dotfiles.git
 ```
 
 Continue with defining a sane default install of `node` with the following.

@@ -1,8 +1,8 @@
 {{ $DEFAULT_EMAIL := env "USER_EMAIL" }}
 {{ $DEFAULT_COMPUTERNAME := env "USER_COMPUTERNAME" }}
 
-{{- $email := promptString "email" $DEFAULT_EMAIL -}}
-{{- $computername := promptString "intended hostname" $DEFAULT_COMPUTERNAME -}}
+{{- $email := promptStringOnce . "email" "email" $DEFAULT_EMAIL -}}
+{{- $computername := promptStringOnce . "computername" "intended hostname" $DEFAULT_COMPUTERNAME -}}
 
 encryption = "age"
 [age]
