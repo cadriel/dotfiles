@@ -1,4 +1,2 @@
-if status is-interactive; and [ -f (brew --prefix)/bin/n ]
-  set -gx N_PREFIX $HOME/.n
-  set -gx PATH $N_PREFIX/bin:$PATH
-end
+set -gx N_PREFIX $HOME/.n
+fish_add_path --global --move --path $N_PREFIX/bin

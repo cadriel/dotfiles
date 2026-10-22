@@ -1,3 +1,1 @@
-if status is-interactive
-  set -gx PATH (brew --prefix coreutils)/libexec/gnubin:$PATH
-end
+fish_add_path --global --move --path $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin

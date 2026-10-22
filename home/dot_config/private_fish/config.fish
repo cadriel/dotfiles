@@ -13,7 +13,7 @@ if status is-interactive
     set -gx HOMEBREW_AUTO_UPDATE_SECS 86400
 
     # Init starship
-    starship init fish | source
+    starship init fish --print-full-init | source
 
     # Init zoxide
     zoxide init fish | source

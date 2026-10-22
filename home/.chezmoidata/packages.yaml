@@ -15,7 +15,6 @@ packages:
     - 'fzf'
     - 'neovim'
     - 'n'
-    - 'frum'
     - 'python'
     - 'perl'
     - 'gh'

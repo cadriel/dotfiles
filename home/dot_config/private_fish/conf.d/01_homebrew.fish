@@ -1,4 +1,7 @@
-if status is-interactive
-  # Setup homebrew
-  eval (/opt/homebrew/bin/brew shellenv)
-end
+# Static equivalent of `brew shellenv fish`, so brew isn't run at startup
+set -gx HOMEBREW_PREFIX /opt/homebrew
+set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
+set -gx HOMEBREW_REPOSITORY /opt/homebrew
+fish_add_path --global --move --path /opt/homebrew/bin /opt/homebrew/sbin
+if test -n "$MANPATH"; set -gx MANPATH (string replace --regex '^:*(.*?):*$' ':$1' -- "$MANPATH"); end
+if not set -q INFOPATH; set INFOPATH ''; end; set -gx INFOPATH /opt/homebrew/share/info $INFOPATH
