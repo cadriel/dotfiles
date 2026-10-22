@@ -1,10 +1,13 @@
-Host *
-  AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_default
-  IdentityFile ~/.ssh/id_cloud
+# Work hosts (encrypted, skipped if absent)
+Include config.work
 
-Host github.com
+Host github.com-personal
   HostName github.com
   User git
   IdentityFile ~/.ssh/id_personal@github
   IdentitiesOnly yes
+
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_default
+  IdentityFile ~/.ssh/id_cloud

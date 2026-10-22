@@ -1,8 +1,6 @@
 [user]
   name = Craig Bassett
   email = {{ .email }}
-[credential]
-  helper = osxkeychain
 [color]
   ui = true
 [push]
@@ -17,3 +15,16 @@
   defaultBranch = main
 [alias]
   c = commit -s
+[credential "https://github.com"]
+  helper =
+  helper = !/opt/homebrew/bin/gh auth git-credential
+  useHttpPath = true
+[credential "https://gist.github.com"]
+  helper =
+  helper = !/opt/homebrew/bin/gh auth git-credential
+# Work identity and credentials (encrypted, skipped if absent)
+[include]
+  path = config.work
+# Repos cloned via the personal SSH alias commit as the personal identity
+[includeIf "hasconfig:remote.*.url:git@github.com-personal:*/**"]
+  path = config.personal
