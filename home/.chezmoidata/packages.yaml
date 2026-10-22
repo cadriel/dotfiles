@@ -22,6 +22,10 @@ packages:
     - 'yazi'
     - 'pnpm'
     - 'micro'
+    - 'htop'
+    - 'dotnet@8'
+    - 'powershell'
+    - 'felixkratz/formulae/borders'
 
     casks:
     - 'font-fira-code-nerd-font'
@@ -43,6 +47,16 @@ packages:
     - 'proton-mail'
     - 'proton-pass'
     - 'protonvpn'
+    - 'nikitabobko/tap/aerospace'
+    - '1password'
+    - 'firefox'
+    - 'obsidian'
+    - 'notion'
+    - 'glide'
+    - 'keycastr'
+    - 'whichspace'
+    - 'codexbar'
+    - 'copilot-cli'
 
     mas:
     - name: 'Amphetamine'
