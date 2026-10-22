@@ -12,34 +12,15 @@ read -p 'Enter your email: ' USER_EMAIL
 read -p 'Enter your hostname: ' USER_COMPUTERNAME
 export USER_EMAIL
 export USER_COMPUTERNAME
-USER_OS=`uname`
-USER_ARCH=`uname -m`
 
-if [ ${USER_OS} == 'Linux' ]; then
-  DISTRO=$(lsb_release -i | cut -d: -f2 | sed s/'^\t'//)
-fi
+# install homebrew
+command -v brew >/dev/null 2>&1 || \
+  (echo '🍺  Installing Homebrew' && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-if [ ${USER_OS} == 'Darwin' ]; then
-  # install homebrew
-  command -v brew >/dev/null 2>&1 || \
-    (echo '🍺  Installing Homebrew' && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")
-    if [ ${USER_ARCH} == 'amd64' ]; then
-      eval "$(/usr/local/bin/brew shellenv)"
-    fi
-    if [ ${USER_ARCH} == 'arm64' ]; then
-      eval "$(/opt/homebrew/bin/brew shellenv)"
-    fi
-
-  # Install chezmoi
-  command -v chezmoi >/dev/null 2>&1 || \
-    (echo '👊  Installing chezmoi' && brew install chezmoi)
-fi
-
-if [ ${USER_OS} == 'Linux' ] && [ ${DISTRO} == 'Ubuntu' ]; then
-  # Install chezmoi
-  command -v chezmoi >/dev/null 2>&1 || \
-    (echo '👊  Installing chezmoi' && sudo snap install chezmoi --classic)
-fi
+# Install chezmoi
+command -v chezmoi >/dev/null 2>&1 || \
+  (echo '👊  Installing chezmoi' && brew install chezmoi)
 
 # Initialize chezmoi
 if [ -d "$HOME/.local/share/chezmoi/.git" ]; then
